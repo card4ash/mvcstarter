@@ -1,0 +1,4 @@
+2018-09-30 20:47:15,574 [11] DEBUG SmartMe.WebApi.Controllers.HomeController - Debug message
+2018-09-30 20:47:15,597 [11] WARN SmartMe.WebApi.Controllers.HomeController - Warn message
+2018-09-30 20:47:15,597 [11] ERROR SmartMe.WebApi.Controllers.HomeController - Error message
+2018-09-30 20:47:15,597 [11] FATAL SmartMe.WebApi.Controllers.HomeController - Fatal message
