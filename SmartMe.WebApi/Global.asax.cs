@@ -17,6 +17,7 @@ namespace SmartMe.WebApi
     {
       XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/Web.config")));
       AreaRegistration.RegisterAllAreas();
+      UnityConfig.RegisterComponents();
       GlobalConfiguration.Configure(WebApiConfig.Register);
       FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
       RouteConfig.RegisterRoutes(RouteTable.Routes);

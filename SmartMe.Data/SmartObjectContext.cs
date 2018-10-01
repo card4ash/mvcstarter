@@ -18,10 +18,9 @@ namespace SmartMe.Data
     {
         #region Ctor
 
-        public SmartObjectContext(string nameOrConnectionString)
-            : base(nameOrConnectionString)
+        public SmartObjectContext()
+            : base("smartme")
         {
-            //((IObjectContextAdapter) this).ObjectContext.ContextOptions.LazyLoadingEnabled = true;
         }
         
         #endregion

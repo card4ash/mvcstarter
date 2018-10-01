@@ -22,6 +22,39 @@ namespace SmartMe.Services.Books
       this._bookRepository = bookRepository;
     }
 
+    public void DeleteBook(Book book)
+    {
+      if (book == null)
+        throw new ArgumentNullException("book");
+
+      _bookRepository.Delete(book);
+    }
+
+    public IList<Book> GetAllBooks()
+    {
+      return _bookRepository.Table.ToList();
+    }
+
+    public Book GetBookById(int bookid)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Book GetBookByISBN(string isbn)
+    {
+      throw new NotImplementedException();
+    }
+
+    public void InsertBook(Book Book)
+    {
+      throw new NotImplementedException();
+    }
+
+    public void UpdateBook(Book Book)
+    {
+      throw new NotImplementedException();
+    }
+
     #endregion
   }
 }

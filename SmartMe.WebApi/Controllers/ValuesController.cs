@@ -1,4 +1,5 @@
 ﻿using log4net;
+using SmartMe.Services.Books;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +13,17 @@ namespace SmartMe.WebApi.Controllers
   {
     // GET api/values
     ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
-    public IEnumerable<string> Get()
+    private readonly IBookService _bookService;
+
+    public ValuesController(
+    IBookService bookService)
     {
-      log.Debug("Debug message");
-      log.Warn("Warn message");
-      log.Error("Error message");
-      log.Fatal("Fatal message");
-      return new string[] { "value1", "value2" };
+      _bookService = bookService;
+    }
+    public IHttpActionResult Get()
+    {
+      var x = _bookService.GetAllBooks();
+      return Ok(x);
     }
 
     // GET api/values/5

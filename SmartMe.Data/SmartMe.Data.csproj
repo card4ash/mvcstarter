@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EfRepository.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="Mappings\Blogs\BlogMap.cs" />
     <Compile Include="Mappings\Blogs\PostMap.cs" />
     <Compile Include="Mappings\Books\BookMap.cs" />
     <Compile Include="Mappings\SmartEntityTypeConfiguration.cs" />
+    <Compile Include="Migrations\201809301847077_InitialCreate.cs" />
+    <Compile Include="Migrations\201809301847077_InitialCreate.Designer.cs">
+      <DependentUpon>201809301847077_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SmartObjectContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,7 +67,11 @@
       <Name>SmartMe.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809301847077_InitialCreate.resx">
+      <DependentUpon>201809301847077_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

@@ -15,7 +15,7 @@ namespace SmartMe.Data.Mappings.Blogs
       this.ToTable("Posts");
       this.HasKey(a => a.Id);
 
-      this.HasRequired(a => a.Blog).WithMany().HasForeignKey(x => x.BlogId).WillCascadeOnDelete(false);
+      this.HasRequired(a => a.Blogs).WithMany().HasForeignKey(x => x.BlogId).WillCascadeOnDelete(false);
     }
   }
 }

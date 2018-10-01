@@ -12,7 +12,7 @@ namespace SmartMe.Data.Mappings.Blogs
   {
     public BlogMap()
     {
-      this.ToTable("Posts");
+      this.ToTable("Blogs");
       this.HasKey(a => a.Id);
     }
   }
